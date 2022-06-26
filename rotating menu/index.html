@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <nav class="navbar">
+     <div class="logo">
+          <img src="images/logo.png" alt="logo">
+      </div>
+      <div class="nav-link">
+           <ul class="nav-items">
+               <li> <a href="#">About us</a>
+               </li>
+               <li> <a href="#">Search</a>
+               </li>
+               <li> <a href="#">Phone</a>
+               </li>
+               <li><a href="#">Accessories</a>
+               </li>
+           </ul>
+       </div>
+      </nav>
+      <div class="information">
+          <div class="border"></div>
+          <img src="images/mobile.png" alt="mobie" class="mobile">
+          <div id="circle">
+              <div class="feature one">
+                  <img src="images/camera.png" alt="camera">
+                  <div class="properties">
+                      <h1>camera</h1>
+                      <p>80 mp,100x zoom</p>
+                  </div>
+              </div>
+              <div class="feature two">
+                  <img src="images/display.png" alt="display">
+                  <div class="properties">
+                      <h1>display</h1>
+                      <p>super amoled full hd</p>
+                  </div>
+              </div>
+              <div class="feature three" >
+                  <img src="images/processor.png" alt="processor">
+                  <div class="properties">
+                      <h1>processor</h1>
+                      <p> snapdragon 768g </p>
+                  </div>
+              </div>
+              <div class="feature four" >
+                  <img src="images/battery.png" alt="battery">
+                  <div class="properties">
+                      <h1>battery</h1>
+                        <p>4250mAH,12 hours</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="controls">
+          <img src="images/arrow.png" alt="dsa" id="upbtn">
+          <h3>features</h3>
+          <img src="images/arrow.png" alt="das" id="downbtn">
+      </div>
+    </div>
+    <script>
+        var circle=document.getElementById("circle");
+        var upbtn=document.getElementById("upbtn");
+        var downbtn=document.getElementById("downbtn");
+        var rotateValue=circle.style.transform;
+        var rotateSum;
+        upbtn.onclick=function(){
+            rotateSum=rotateValue+"rotate(-90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+        downbtn.onclick=function(){
+            rotateSum=rotateValue+"rotate(90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+    </script>
+</body>
+</html>
